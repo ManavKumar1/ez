@@ -1,0 +1,79 @@
+.card {
+  background: white;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+  padding: var(--spacing-md);
+  cursor: grab;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px var(--color-shadow);
+
+  &:hover {
+    box-shadow: 0 2px 8px var(--color-shadow);
+    transform: translateY(-2px);
+  }
+
+  &.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text);
+      word-break: break-word;
+      flex: 1;
+      line-height: 1.4;
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+
+    .card-action-btn {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 12px;
+      background: var(--color-bg-secondary);
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.edit-btn {
+        color: var(--color-primary);
+
+        &:hover {
+          background: rgba(0, 102, 255, 0.1);
+        }
+      }
+
+      &.delete-btn {
+        color: var(--color-danger);
+
+        &:hover {
+          background: rgba(255, 59, 59, 0.1);
+        }
+      }
+    }
+  }
+
+  &:hover .card-actions {
+    opacity: 1;
+  }
+}

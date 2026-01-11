@@ -1,0 +1,94 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius);
+  border-top: 4px solid;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  overflow: hidden;
+  min-width: 300px;
+  max-height: 600px;
+  flex: 1;
+
+  .column-header {
+    color: white;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    .card-count {
+      background: rgba(255, 255, 255, 0.3);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .add-column-btn {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .cards-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    transition: background-color 0.2s ease;
+
+    &.drop-active {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .empty-state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      color: var(--color-text-secondary);
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .column {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    min-width: 100%;
+    max-height: 500px;
+  }
+}

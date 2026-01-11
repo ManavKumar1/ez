@@ -1,0 +1,41 @@
+{
+  "name": "tree-view-kanban-board",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "jiti": "latest",
+    "less": "latest",
+    "lightningcss": "latest",
+    "lucide-react": "0.562.0",
+    "next": "16.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stylus": "latest",
+    "sugarss": "latest",
+    "tailwind-merge": "3.4.0",
+    "tailwindcss-animate": "1.0.7",
+    "terser": "latest",
+    "tsx": "latest",
+    "yaml": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.6",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "postcss": "8.5.6",
+    "sass": "^1.72.0",
+    "sass-embedded": "^1.97.2",
+    "tailwindcss": "4.1.18",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
+  }
+}
